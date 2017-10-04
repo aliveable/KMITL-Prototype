@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">NewKmitlApp</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_More">More</string>
+    <string name="title_Map">Map</string>
+    <string name="title_Event">Event</string>
+    <string name="title_Calendar">Calendar</string>
+    <string name="title_Feed">Feed</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Feed_Fragment">Feed Fragment</string>
+    <string name="more_fragment">More Fragment</string>
+    <string name="Map_Fragment">Map Fragment</string>
+    <string name="Calendar_fragment">Calendar Fragment</string>
+    <string name="Event_fragment">Event Fragment</string>
+</resources>

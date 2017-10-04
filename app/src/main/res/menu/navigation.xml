@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_Feed"
+        android:icon="@mipmap/ic_newfeed"
+        android:title="@string/title_Feed" />
+
+    <item
+        android:id="@+id/navigation_Calendar"
+        android:icon="@android:drawable/ic_menu_my_calendar"
+        android:title="@string/title_Calendar" />
+
+    <item
+        android:id="@+id/navigation_Event"
+
+        android:icon="@mipmap/ic_feed"
+        android:title="@string/title_Event" />
+
+    <item
+        android:id="@+id/navigation_Map"
+        android:icon="@android:drawable/ic_dialog_map"
+        android:title="@string/title_Map" />
+
+    <item
+        android:id="@+id/navigation_More"
+        android:icon="@mipmap/ic_more"
+        android:title="@string/title_More" />
+
+</menu>
