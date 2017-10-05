@@ -30,13 +30,11 @@ public class MainActivity extends AppCompatActivity implements FeedFragment.Frag
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         mTextMessage = (TextView) findViewById(R.id.message);
-
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         //navigation.inflateMenu(R.menu.navigation);
+        Startapp.act.finish();
         fragmentManager = getSupportFragmentManager();
-
         navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -83,6 +81,7 @@ public class MainActivity extends AppCompatActivity implements FeedFragment.Frag
         //navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener);
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().add(R.id.FragmentContainer, new FeedFragment()).commit();
+
 
     }
 
