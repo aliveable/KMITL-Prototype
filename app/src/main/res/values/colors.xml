@@ -4,4 +4,5 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="KMITL">#ff6c00</color>
+    <color name="Bar_color">#fff</color>
 </resources>

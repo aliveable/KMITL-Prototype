@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView mTextMessage;
     private Fragment fragment;
     private FragmentManager fragmentManager;
-    private BottomNavigationView navigation;
+//    private BottomNavigationView navigation;
 
 
     @Override
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 
         mTextMessage = (TextView) findViewById(R.id.message);
 
-        navigation = (BottomNavigationView) findViewById(R.id.navigation);
+        BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         //navigation.inflateMenu(R.menu.navigation);
         fragmentManager = getSupportFragmentManager();
 
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 int id = item.getItemId();
                 final FragmentTransaction transaction = fragmentManager.beginTransaction();
-                switch (id) {
+                switch (item.getItemId()) {
                     case R.id.navigation_Feed:
                         mTextMessage.setText(R.string.title_Feed);
                         fragment = new FeedFragment();
