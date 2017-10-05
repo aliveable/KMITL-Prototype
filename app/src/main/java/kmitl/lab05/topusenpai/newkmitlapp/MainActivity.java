@@ -15,9 +15,10 @@ import kmitl.lab05.topusenpai.newkmitlapp.Fragment.EventFragment;
 import kmitl.lab05.topusenpai.newkmitlapp.Fragment.FeedFragment;
 import kmitl.lab05.topusenpai.newkmitlapp.Fragment.MapFragment;
 import kmitl.lab05.topusenpai.newkmitlapp.Fragment.MoreFragment;
-import kmitl.lab05.topusenpai.newkmitlapp.Fragment.mainFragment;
+import kmitl.lab05.topusenpai.newkmitlapp.Fragment.NewsFragment;
+import kmitl.lab05.topusenpai.newkmitlapp.Fragment.ShowEventFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements FeedFragment.FragmentListener, EventFragment.onSelectEventListener{
 
     private TextView mTextMessage;
     private Fragment fragment;
@@ -29,13 +30,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         mTextMessage = (TextView) findViewById(R.id.message);
-
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         //navigation.inflateMenu(R.menu.navigation);
+        Startapp.act.finish();
         fragmentManager = getSupportFragmentManager();
-
         navigation.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -83,6 +82,30 @@ public class MainActivity extends AppCompatActivity {
         FragmentManager fragmentManager = getSupportFragmentManager();
         fragmentManager.beginTransaction().add(R.id.FragmentContainer, new FeedFragment()).commit();
 
+
     }
 
+    private void viewFragment(Fragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction()
+                .replace(R.id.FragmentContainer, fragment)
+                .addToBackStack(null)
+                .commit();
+    }
+
+    @Override
+    public void detaillistener(int resource) {
+        viewFragment(NewsFragment.newInstance(resource));
+    }
+
+    @Override
+    public void onSelectListener(String select) {
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        switch (select){
+            case "event1":
+                fragment = new ShowEventFragment();
+                transaction.replace(R.id.FragmentContainer, fragment).addToBackStack(null).commit();
+
+        }
+    }
 }
