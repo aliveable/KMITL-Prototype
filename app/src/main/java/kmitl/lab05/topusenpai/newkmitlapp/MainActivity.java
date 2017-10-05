@@ -15,9 +15,9 @@ import kmitl.lab05.topusenpai.newkmitlapp.Fragment.EventFragment;
 import kmitl.lab05.topusenpai.newkmitlapp.Fragment.FeedFragment;
 import kmitl.lab05.topusenpai.newkmitlapp.Fragment.MapFragment;
 import kmitl.lab05.topusenpai.newkmitlapp.Fragment.MoreFragment;
-import kmitl.lab05.topusenpai.newkmitlapp.Fragment.mainFragment;
+import kmitl.lab05.topusenpai.newkmitlapp.Fragment.NewsFragment;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements FeedFragment.FragmentListener {
 
     private TextView mTextMessage;
     private Fragment fragment;
@@ -85,4 +85,16 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    private void viewFragment(Fragment fragment) {
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        fragmentManager.beginTransaction()
+                .replace(R.id.FragmentContainer, fragment)
+                .addToBackStack(null)
+                .commit();
+    }
+
+    @Override
+    public void detaillistener(int resource) {
+        viewFragment(NewsFragment.newInstance(resource));
+    }
 }
