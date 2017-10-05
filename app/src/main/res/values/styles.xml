@@ -3,9 +3,14 @@
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/KMITL</item>
+        <item name="colorPrimaryDark">@color/KMITL</item>
+        <item name="colorAccent">@color/KMITL</item>
     </style>
+
+    <!--<style name="KMITLTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+        <!--<item name="KMITLAll">@color/KMITL</item>-->
+    <!--</style>-->
 
 </resources>
