@@ -104,7 +104,7 @@ public class MainActivity extends AppCompatActivity implements FeedFragment.Frag
         switch (select){
             case "event1":
                 fragment = new ShowEventFragment();
-                transaction.replace(R.id.FragmentContainer, fragment).commit();
+                transaction.replace(R.id.FragmentContainer, fragment).addToBackStack(null).commit();
 
         }
     }
