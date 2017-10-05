@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
                 switch (id) {
                     case R.id.navigation_Feed:
                         mTextMessage.setText(R.string.title_Feed);
-                        fragment = new FeedFragment();;
+                        fragment = new FeedFragment();
                         transaction.replace(R.id.FragmentContainer, fragment).commit();
                         break;
                         //return true;
