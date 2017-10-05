@@ -16,8 +16,9 @@ import kmitl.lab05.topusenpai.newkmitlapp.Fragment.FeedFragment;
 import kmitl.lab05.topusenpai.newkmitlapp.Fragment.MapFragment;
 import kmitl.lab05.topusenpai.newkmitlapp.Fragment.MoreFragment;
 import kmitl.lab05.topusenpai.newkmitlapp.Fragment.NewsFragment;
+import kmitl.lab05.topusenpai.newkmitlapp.Fragment.ShowEventFragment;
 
-public class MainActivity extends AppCompatActivity implements FeedFragment.FragmentListener {
+public class MainActivity extends AppCompatActivity implements FeedFragment.FragmentListener, EventFragment.onSelectEventListener{
 
     private TextView mTextMessage;
     private Fragment fragment;
@@ -96,5 +97,16 @@ public class MainActivity extends AppCompatActivity implements FeedFragment.Frag
     @Override
     public void detaillistener(int resource) {
         viewFragment(NewsFragment.newInstance(resource));
+    }
+
+    @Override
+    public void onSelectListener(String select) {
+        FragmentTransaction transaction = fragmentManager.beginTransaction();
+        switch (select){
+            case "event1":
+                fragment = new ShowEventFragment();
+                transaction.replace(R.id.FragmentContainer, fragment).commit();
+
+        }
     }
 }

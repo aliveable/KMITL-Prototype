@@ -49,4 +49,10 @@
         นายธรรศ แสงสมเรือง นักศึกษาคณะเทคโนโลยีสารสนเทศ สจล. ร่วมกับ นายเมธาสิทธิ์ รินทร และ นายพงศ์พล ไผ่อรุณรัตน์ นักศึกษาจากคณะวิศวกรรมศาสตร์ สจล. ภายใต้ทีมที่มีชื่อว่า “555plus” ได้รับรางวัลชมเชย พร้อมทุนการศึกษา 10,000 บาท</string>
     <string name="news7Content">รางวัลชมเชย Thailand\'s Network Security Contest 2017</string>
 
+    <string name="event1">สถานีคนเดิน</string>
+    <string name="event_detail">วันพรุ่งนี้สถานีคนเดินพระจอมเกล้าลาดกระบัง กลับมาเปิดทำการตามปกติแล้ว\n\nหลังจากผ่านช่วงการสอบกลางภาคไป โดยในเดือนนี้จะเปิดทำการในวันที่ 5 และ 19 ตุลาคมเท่านั้น</string>
+    <string name="event_date">วันพฤหัสบดี 15.00 - 21.00</string>
+    <string name="event_location">ณ สนามกีฬาพระจอม</string>
+    <string name="more_event">More Event Soon</string>
+
 </resources>
